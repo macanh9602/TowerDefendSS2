@@ -19,7 +19,7 @@ public class BuildingManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //afas
     }
 
     // Update is called once per frame
