@@ -17,7 +17,7 @@ public class ResourcesManager : MonoBehaviour
 
     void Awake()
     {
-
+        //sad
         instance = this;
         m_Resources = new Dictionary<ResourcesTypeSO, int>();
         ResourcesTypeListSO resourcesTypeList = Resources.Load<ResourcesTypeListSO>(typeof(ResourcesTypeListSO).Name);
