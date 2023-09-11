@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 740cc3d0876a17e40bba4c4423b37c18, type: 3}
+  m_Name: Stone Building Type SO
+  m_EditorClassIdentifier: 
+  nameBuilding: Stone Mine
+  prefab: {fileID: 503915408075174679, guid: 8c7175f29ff8e2a41be4ab923dd24c61, type: 3}
+  generatorData:
+    timeMax: 2
+    resourcesType: {fileID: 11400000, guid: 0d1ceb12e1e292843bacf78f737e5419, type: 2}
+  sprite: {fileID: 21300000, guid: 0f62d068b5d49f54eaff312a0d07d779, type: 3}

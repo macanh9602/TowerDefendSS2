@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 740cc3d0876a17e40bba4c4423b37c18, type: 3}
+  m_Name: Gold Mine Bulding Type SO
+  m_EditorClassIdentifier: 
+  nameBuilding: Gold Mine
+  prefab: {fileID: 4710165671322300272, guid: c4f4179295018db42bd5b3cc9b31b3e5, type: 3}
+  generatorData:
+    timeMax: 3
+    resourcesType: {fileID: 11400000, guid: 7794efa93cf10414d96bb00aac23bb41, type: 2}
+  sprite: {fileID: 21300000, guid: 43596516a1e80ef4eaf430e1838b1718, type: 3}
