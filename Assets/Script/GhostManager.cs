@@ -6,47 +6,31 @@ using System;
 public class GhostManager : MonoBehaviour
 {
     private GameObject ghost;
-    private BuildingTypeSO ActiveBuildingType;
-
     private void Awake()
     {
         ghost = GameObject.Find("Ghost");
     }
+    private void Start()
+    {
+        BuildingManager.Instance.OnChangeBuildingType += BuidlingManager_OnChangeBuildingType;
+    }
     private void Update()
     {
-        //if (Input.GetKeyUp(KeyCode.Z))
-        //{
-        //    Hide(); ;
-        //}
-        //if (Input.GetKeyUp(KeyCode.X))
-        //{
-        //    Show();
-        //}
-        BuildingManager.Instance.OnChangeBuildingType += BuidlingManager_OnChangeBuildingType;
-        GhostFuction();
-
+        ghost.transform.position = Extensions.getMousePosition();
     }
-
-    private void GhostFuction()
+    private void BuidlingManager_OnChangeBuildingType(object sender, BuildingManager.OnActiveBuidlingChangeEventArg e)
     {
-        if (ActiveBuildingType != null)
+        e.activeBuildingType = BuildingManager.Instance.getActiveBuildingType();
+        if (e.activeBuildingType != null)
         {
-            Show(ActiveBuildingType);
-            ghost.transform.position = Extensions.getMousePosition();
+            Show(e.activeBuildingType);
+
         }
         else
         {
             Hide();
         }
     }
-
-    private void BuidlingManager_OnChangeBuildingType(object sender, EventArgs e)
-    {
-        ActiveBuildingType = BuildingManager.Instance.getActiveBuildingType();
-    }
-
-
-
     private void Hide()
     {
 

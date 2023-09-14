@@ -50,14 +50,22 @@ public class BuldingTypeSelectUI : MonoBehaviour
             });
         }
     }
+    private void Start()
+    {
+        BuildingManager.Instance.OnChangeBuildingType += BuildingManager_OnChangeBuildingType;
+        UpdateActiveBuidlingTypeButton();
+    }
+
+    private void BuildingManager_OnChangeBuildingType(object sender, BuildingManager.OnActiveBuidlingChangeEventArg e)
+    {
+        UpdateActiveBuidlingTypeButton();
+    }
+
     // Start is called before the first frame update
     void Update()
     {
-        UpdateActiveBuidlingTypeButton();
-        //GhostFromActiveBuidlingType();
 
     }
-
     void UpdateActiveBuidlingTypeButton()
     {
         foreach (BuildingTypeSO buildingType in btnTransformDictionary.Keys)

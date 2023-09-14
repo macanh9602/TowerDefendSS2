@@ -11,7 +11,12 @@ public class BuildingManager : MonoBehaviour
     private BuildingTypeSO ActiveBuildingType;
     private BuildingTypeListSO buildingTypeList;
 
-    public event EventHandler OnChangeBuildingType;
+    public event EventHandler<OnActiveBuidlingChangeEventArg> OnChangeBuildingType;
+    public class OnActiveBuidlingChangeEventArg : EventArgs
+    {
+        public BuildingTypeSO activeBuildingType;
+    }
+
 
     private void Awake()
     {
@@ -42,16 +47,10 @@ public class BuildingManager : MonoBehaviour
             }
         }
     }
-    //private Vector2 getMousePosition()
-    //{
-    //    Vector3 mouseWordPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    //    mouseWordPosition.z = 0;
-    //    return mouseWordPosition;
-    //}
     public void setActiveBuildingType(BuildingTypeSO buildingType)
     {
         ActiveBuildingType = buildingType;
-        OnChangeBuildingType?.Invoke(this, EventArgs.Empty);
+        OnChangeBuildingType?.Invoke(this, new OnActiveBuidlingChangeEventArg { activeBuildingType = ActiveBuildingType });
     }
     public BuildingTypeSO getActiveBuildingType()
     {
