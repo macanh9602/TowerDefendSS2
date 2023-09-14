@@ -14,7 +14,7 @@ public class BuildingManager : MonoBehaviour
     {
         Instance = this;
         buildingTypeList = Resources.Load<BuildingTypeListSO>(typeof(BuildingTypeListSO).Name);
-        ActiveBuildingType = buildingTypeList.lstBuildings[0];
+        //ActiveBuildingType = buildingTypeList.lstBuildings[0];
     }
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,11 @@ public class BuildingManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
-            Instantiate(ActiveBuildingType.prefab, getMousePosition(), Quaternion.identity);
+            if (ActiveBuildingType != null)
+            {
+                Instantiate(ActiveBuildingType.prefab, getMousePosition(), Quaternion.identity);
+
+            }
         }
     }
     private Vector2 getMousePosition()
@@ -42,5 +46,9 @@ public class BuildingManager : MonoBehaviour
     public void setActiveBuildingType(BuildingTypeSO buildingType)
     {
         ActiveBuildingType = buildingType;
+    }
+    public BuildingTypeSO getActiveBuildingType()
+    {
+        return ActiveBuildingType;
     }
 }
