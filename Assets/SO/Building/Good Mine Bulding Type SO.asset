@@ -18,3 +18,4 @@ MonoBehaviour:
     timeMax: 1
     resourcesType: {fileID: 11400000, guid: a471d0a572af34549a1d24bad46a84cb, type: 2}
   sprite: {fileID: 21300000, guid: 793ca27a5a3378149aaa12abe85933f4, type: 3}
+  ghorst: {fileID: 21300000, guid: ffd4d309f7f04fd46950b63405ec104b, type: 3}
