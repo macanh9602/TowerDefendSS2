@@ -3,3 +3,4 @@
 
 //event publisher describer : tạo event gán vào sự kiện thay đổi ( event EventHandler , ?.Invoke(this , EventArgs.Empty)) ) 
 //                            lắng nghe sự kiện (+=)
+//trinhf xử lý sự kiện EventHandler và EventHandler<>(có dữ liệu truyền vào ) 

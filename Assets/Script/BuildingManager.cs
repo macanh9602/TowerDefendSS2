@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -10,11 +11,18 @@ public class BuildingManager : MonoBehaviour
     private BuildingTypeSO ActiveBuildingType;
     private BuildingTypeListSO buildingTypeList;
 
+    public event EventHandler<OnActiveBuidlingChangeEventArg> OnChangeBuildingType;
+    public class OnActiveBuidlingChangeEventArg : EventArgs
+    {
+        public BuildingTypeSO activeBuildingType;
+    }
+
+
     private void Awake()
     {
         Instance = this;
         buildingTypeList = Resources.Load<BuildingTypeListSO>(typeof(BuildingTypeListSO).Name);
-        ActiveBuildingType = buildingTypeList.lstBuildings[0];
+        //ActiveBuildingType = buildingTypeList.lstBuildings[0];
     }
     // Start is called before the first frame update
     void Start()
@@ -32,15 +40,20 @@ public class BuildingManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
-            Instantiate(ActiveBuildingType.prefab, getMousePosition(), Quaternion.identity);
+            if (ActiveBuildingType != null)
+            {
+                Instantiate(ActiveBuildingType.prefab, Extensions.getMousePosition(), Quaternion.identity);
+
+            }
         }
-    }
-    private Vector2 getMousePosition()
-    {
-        return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
     public void setActiveBuildingType(BuildingTypeSO buildingType)
     {
         ActiveBuildingType = buildingType;
+        OnChangeBuildingType?.Invoke(this, new OnActiveBuidlingChangeEventArg { activeBuildingType = ActiveBuildingType });
+    }
+    public BuildingTypeSO getActiveBuildingType()
+    {
+        return ActiveBuildingType;
     }
 }

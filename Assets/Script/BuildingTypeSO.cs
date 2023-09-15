@@ -10,4 +10,5 @@ public class BuildingTypeSO : ScriptableObject
     public Transform prefab;
     public ResourcesGeneratorData generatorData;
     public Sprite sprite;
+    public Sprite ghorst;
 }
