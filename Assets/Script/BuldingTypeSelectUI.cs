@@ -14,6 +14,8 @@ public class BuldingTypeSelectUI : MonoBehaviour
 
     [SerializeField] Sprite mouseSprite;
     private Transform btnMouse;
+
+    [SerializeField] List<BuildingTypeSO> ignorBuildingType;
     //Dictionary<BuildingTypeSO, Transform> buildingTypeDictionary;
     private void Awake()
     {
@@ -36,6 +38,7 @@ public class BuldingTypeSelectUI : MonoBehaviour
         buildingTypeList = Resources.Load<BuildingTypeListSO>(typeof(BuildingTypeListSO).Name);
         foreach (BuildingTypeSO buildingType in buildingTypeList.lstBuildings)
         {
+            if (ignorBuildingType.Contains(buildingType)) continue;
             Transform btnTransform = Instantiate(btnTemplate, transform);
             Image img = btnTransform.Find("Image").GetComponent<Image>();
             img.sprite = buildingType.sprite;

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 740cc3d0876a17e40bba4c4423b37c18, type: 3}
+  m_Name: HQ Buidling Type SO
+  m_EditorClassIdentifier: 
+  nameBuilding: HQ
+  prefab: {fileID: 7678345127638711009, guid: 3c016e9bbeb45954fafd0884e4b4f4cc, type: 3}
+  generatorData:
+    timeMax: 1
+    resourcesType: {fileID: 11400000, guid: a471d0a572af34549a1d24bad46a84cb, type: 2}
+    resourceDitectionRadius: 20
+    maxResourceAmount: 5
+  sprite: {fileID: 21300000, guid: bd5b34d1807bea74fbf6093ff85ce769, type: 3}
+  ghorst: {fileID: 21300000, guid: bd5b34d1807bea74fbf6093ff85ce769, type: 3}
+  minContructDistance: 0

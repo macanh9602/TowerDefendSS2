@@ -17,11 +17,11 @@ public class TreeManager : MonoBehaviour
     {
         float precisionMultiplier = 5f; //giam tinh trang float(0.9 , 1.2) chuyen ve 1
         sprite.sortingOrder = (int)(-(transform.position.y + positionOffset) * precisionMultiplier);
-        Debug.Log(transform.position.y);
-        //if (runOnce)
-        //{
-        //    Destroy(this);
-        //}
+        //Debug.Log(transform.position.y);
+        if (runOnce)
+        {
+            Destroy(this);
+        }
     }
 
 }
