@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 740cc3d0876a17e40bba4c4423b37c18, type: 3}
-  m_Name: Good Mine Bulding Type SO
+  m_Name: Wood Mine Bulding Type SO
   m_EditorClassIdentifier: 
   nameBuilding: Good Mine
   prefab: {fileID: 7678345127638711009, guid: bd39e94f3e7223b49acf4e5416104c85, type: 3}
   generatorData:
     timeMax: 1
     resourcesType: {fileID: 11400000, guid: a471d0a572af34549a1d24bad46a84cb, type: 2}
+    resourceDitectionRadius: 20
+    maxResourceAmount: 15
   sprite: {fileID: 21300000, guid: 793ca27a5a3378149aaa12abe85933f4, type: 3}
   ghorst: {fileID: 21300000, guid: ffd4d309f7f04fd46950b63405ec104b, type: 3}
+  minContructDistance: 20

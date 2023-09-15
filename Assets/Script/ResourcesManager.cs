@@ -26,16 +26,16 @@ public class ResourcesManager : MonoBehaviour
         {
             m_Resources[resourceType] = 0;
         }
-        testLog();
+        //testLog();
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            ResourcesTypeListSO resourcesTypeList = Resources.Load<ResourcesTypeListSO>(typeof(ResourcesTypeListSO).Name);
-            addResources(resourcesTypeList.lstResources[0], 2);
-            testLog();
-        }
+        //if (Input.GetKeyDown(KeyCode.T))
+        //{
+        //    ResourcesTypeListSO resourcesTypeList = Resources.Load<ResourcesTypeListSO>(typeof(ResourcesTypeListSO).Name);
+        //    addResources(resourcesTypeList.lstResources[0], 2);
+        //    //testLog();
+        //}
 
     }
 
@@ -50,7 +50,7 @@ public class ResourcesManager : MonoBehaviour
     {
         m_Resources[resourcesType] += value;
         OnResourceAmountChange?.Invoke(this, EventArgs.Empty);
-        testLog();
+        //testLog();
     }
     public int GetResourceAmount(ResourcesTypeSO resourcesType)
     {

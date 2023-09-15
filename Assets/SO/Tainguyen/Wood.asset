@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 832e537bdee29ad41b821b342cb6bd14, type: 3}
-  m_Name: Good
+  m_Name: Wood
   m_EditorClassIdentifier: 
   nameResource: Wood
   sprite: {fileID: 21300000, guid: 0b991b4895d956f4ea5f954ab13b7529, type: 3}
