@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3244237876210852540}
   - component: {fileID: 4249300281706210696}
   - component: {fileID: 6750899286706496625}
+  - component: {fileID: 2647662882014095141}
   m_Layer: 0
   m_Name: pfHQ
   m_TagString: Untagged
@@ -157,3 +158,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingType: {fileID: 11400000, guid: ec7d2abbe4494e64f8faaa70f2bde935, type: 2}
+--- !u!114 &2647662882014095141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8652745191496311213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b452006d81093f4dbde6b53c39ff6e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runOnce: 1
+  positionOffset: 0
