@@ -15,10 +15,10 @@ MonoBehaviour:
   nameBuilding: Stone Mine
   prefab: {fileID: 503915408075174679, guid: 8c7175f29ff8e2a41be4ab923dd24c61, type: 3}
   generatorData:
-    timeMax: 2
+    timeMax: 5
     resourcesType: {fileID: 11400000, guid: 0d1ceb12e1e292843bacf78f737e5419, type: 2}
     resourceDitectionRadius: 20
-    maxResourceAmount: 15
+    maxResourceAmount: 3
   sprite: {fileID: 21300000, guid: 0f62d068b5d49f54eaff312a0d07d779, type: 3}
   ghorst: {fileID: 21300000, guid: ef7d3555a3ec5b147b3e7117e0be32ed, type: 3}
   minContructDistance: 20

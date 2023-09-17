@@ -1,10 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-
+//UI loại tài nguyên và số lượng thu hoạch của nó
 public class ResourcesUI : MonoBehaviour
 {
     [SerializeField] private Transform resourcesTemplate;

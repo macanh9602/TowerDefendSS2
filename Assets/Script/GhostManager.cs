@@ -6,9 +6,13 @@ using System;
 public class GhostManager : MonoBehaviour
 {
     private GameObject ghost;
+    //private GameObject ghostPercent;
+    private OverlayGhost overlayGhost;
     private void Awake()
     {
         ghost = GameObject.Find("Ghost");
+        overlayGhost = transform.Find("pfResourceGeneratorOverlayGhost").GetComponent<OverlayGhost>();
+        Hide();
     }
     private void Start()
     {
@@ -16,7 +20,7 @@ public class GhostManager : MonoBehaviour
     }
     private void Update()
     {
-        ghost.transform.position = Extensions.getMousePosition();
+        transform.position = Extensions.getMousePosition();
     }
     private void BuidlingManager_OnChangeBuildingType(object sender, BuildingManager.OnActiveBuidlingChangeEventArg e)
     {
@@ -24,11 +28,12 @@ public class GhostManager : MonoBehaviour
         if (e.activeBuildingType != null)
         {
             Show(e.activeBuildingType);
-
+            overlayGhost.Show(e.activeBuildingType.generatorData);
         }
         else
         {
             Hide();
+            overlayGhost.Hide();
         }
     }
     private void Hide()

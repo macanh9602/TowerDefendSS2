@@ -1,8 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//gán vào UI chọn list building 
+//trả về sự kiện "Thay đổi loại buidling"
 public class BuldingTypeSelectUI : MonoBehaviour
 {
 

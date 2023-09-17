@@ -1,7 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//sắp xếp GObj theo sortinglayer 
 public class SpritePositionSortingOrder : MonoBehaviour
 {
     private SpriteRenderer sprite;

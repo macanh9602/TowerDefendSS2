@@ -5,9 +5,11 @@ using System.Runtime.CompilerServices;
 using System.Runtime.Versioning;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
+//script gắn GObj trong main 
 // file quản lý tài nguyên ( chuyển danh sách tài nguyên từ list vào trong thư viện dưới dạng key-value )
-//current : có hàm addResource --> + giá trị vào key (value ban đầu = 0)
+// có hàm addResource --> + giá trị vào key (value ban đầu = 0)
+//có sự kiện "số lượng thu hoạch tăng"
+//có hàm lấy ra số lượng thu hoạch của loại tài nguyên (key -> value )
 public class ResourcesManager : MonoBehaviour
 {
     public static ResourcesManager instance { get; private set; }

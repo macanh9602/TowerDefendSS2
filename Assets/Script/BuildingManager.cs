@@ -6,6 +6,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 //tạo nhà máy , mỏ trên map 
+//script gắn GObj trong main 
+//có thể sử dụng qua singeleton 
+//có gán sự kiện "Thay đổi building"
 public class BuildingManager : MonoBehaviour
 {
     public static BuildingManager Instance { get; private set; }
@@ -61,6 +64,7 @@ public class BuildingManager : MonoBehaviour
         return ActiveBuildingType;
     }
     public bool CanSpawnBuiding(BuildingTypeSO buildingType, Vector3 position)
+    //đặt điều kiện spawn , ko được đặt quá gần theo bán kính minContructDistance , ko được đặt quá xa ngoài  bán kính maxConstructionRadius
     {
         BoxCollider2D boxCollider2D = buildingType.prefab.GetComponent<BoxCollider2D>();
         Collider2D[] collider2DArray = Physics2D.OverlapBoxAll(position + (Vector3)boxCollider2D.offset, boxCollider2D.size, 0);

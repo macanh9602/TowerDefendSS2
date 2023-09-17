@@ -15,10 +15,10 @@ MonoBehaviour:
   nameBuilding: Gold Harvester
   prefab: {fileID: 4710165671322300272, guid: c4f4179295018db42bd5b3cc9b31b3e5, type: 3}
   generatorData:
-    timeMax: 3
+    timeMax: 10
     resourcesType: {fileID: 11400000, guid: 7794efa93cf10414d96bb00aac23bb41, type: 2}
     resourceDitectionRadius: 20
-    maxResourceAmount: 15
+    maxResourceAmount: 3
   sprite: {fileID: 21300000, guid: f487de4bd02ef55488bde2bcf65292a9, type: 3}
   ghorst: {fileID: 21300000, guid: fb8bcba2c8374e8489ff06bf8b57216b, type: 3}
   minContructDistance: 20
