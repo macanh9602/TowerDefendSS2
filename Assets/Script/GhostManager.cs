@@ -1,8 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+//Đặt trong Gameobject BuidlingGhost
+//Show / Hide Ghost / Overlayghost theo event "thay đổi loại building"
 public class GhostManager : MonoBehaviour
 {
     private GameObject ghost;

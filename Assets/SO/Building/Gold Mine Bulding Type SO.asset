@@ -22,3 +22,8 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: f487de4bd02ef55488bde2bcf65292a9, type: 3}
   ghorst: {fileID: 21300000, guid: fb8bcba2c8374e8489ff06bf8b57216b, type: 3}
   minContructDistance: 20
+  cost:
+  - resourcesType: {fileID: 11400000, guid: a471d0a572af34549a1d24bad46a84cb, type: 2}
+    amount: 15
+  - resourcesType: {fileID: 11400000, guid: 0d1ceb12e1e292843bacf78f737e5419, type: 2}
+    amount: 10

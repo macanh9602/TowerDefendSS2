@@ -1,7 +1,9 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+//đặt trong prfResourceGeneratorOverlay
+//Bảng thông số của 1 công trình (gồm : Icon, Số lượng tài nguyên gần đó(Text) , thanh load (bar)
 public class Data1Buidling : MonoBehaviour
 {
     [SerializeField] ResourcesGenerator resourcesGenerator;

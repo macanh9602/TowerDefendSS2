@@ -12,4 +12,5 @@ public class BuildingTypeSO : ScriptableObject
     public Sprite sprite;
     public Sprite ghorst;
     public float minContructDistance;
+    public BuildingCost[] cost;
 }

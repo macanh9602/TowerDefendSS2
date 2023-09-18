@@ -1,7 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+
+// gán vào "pfResourceGeneratorOverlayGhost" trong BuildingGhost
+//cx tạo ra Hide / Show
+//trả về Icon , % percent 
 public class OverlayGhost : MonoBehaviour
 {
     [SerializeField] ResourcesGeneratorData resourcesGeneratorData;

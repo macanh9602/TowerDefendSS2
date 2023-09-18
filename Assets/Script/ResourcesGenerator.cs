@@ -63,17 +63,19 @@ public class ResourcesGenerator : MonoBehaviour
             ResourcesManager.instance.addResources(resourcesGeneratorData.resourcesType, nearbyResourceAmount);
         }
     }
+    // trả về dữ liệu tài nguyên (thòi gian max , loại tài nguyên , bán kính , số lượng tài nguyên tối đa  
     public ResourcesGeneratorData getResourcesGeneratorData()
     {
         return resourcesGeneratorData;
     }
-    public float getResourceAmount()
+    public float getResourceAmount() //trả về số lượng tài nguyên trong phạm vi sau khi đặt building xuống 
     {
         return nearbyResourceAmount;
     }
-    public float getTimeSpeedMakeResource()
+    public float getTimeSpeedMakeResource() //trả về tốc độ tạo tài nguyên 
     {
         return time / timeMax;
     }
+
 
 }

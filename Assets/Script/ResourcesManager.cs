@@ -59,6 +59,29 @@ public class ResourcesManager : MonoBehaviour
         return m_Resources[resourcesType];
     }
 
+    public bool CanBuild(BuildingCost[] buildingCostsArray)
+    {
+        foreach (BuildingCost cost in buildingCostsArray)
+        {
+            if (GetResourceAmount(cost.resourcesType) >= cost.amount)
+            {
+                //
+            }
+            else
+            {
+                //
+                return false;
+            }
+        }
+        return true;
+    }
+    public void UseMoney(BuildingCost[] buildingCostsArray)
+    {
+        foreach (BuildingCost cost in buildingCostsArray)
+        {
+            m_Resources[cost.resourcesType] -= cost.amount;
 
+        }
+    }
 
 }
